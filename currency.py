@@ -21,12 +21,16 @@ if __name__ == '__main__':
     # We enter while as true 
     while True: 
 
-        name = input("Please enter your first name: ")
-        
-        base = input("Please enter the base currency (q for quit) ").upper() # Invalid currency check in convert_currency
+        name = input("Please enter your first name (q for quit): ")
 
-        if base.lower() == "q" :
+        if name.lower() == "q" :
             break
+
+        if name[0] != name[0].upper():  
+            name = name[0].upper() + name[1:] # A good alternative would be name = name.capitalize() 
+    
+        base = input("Please enter the base currency: ").upper() # Invalid currency check in convert_currency
+
 
         amount = input("Please enter the amount you have: ") # The digit number that we enter is saved as a string "100"
 
