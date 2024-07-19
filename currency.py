@@ -48,7 +48,7 @@ if __name__ == '__main__':
         for ticker, value in data.items():
             final = value * amount
             print(f"{ticker} is: {final}")
-        print("Have a nice day")
+        print(f"Have a nice day {name}")
 
 
 
